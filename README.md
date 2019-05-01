@@ -8,6 +8,7 @@
 ### Links and Resources
 * [GitHub](https://github.com/charmedsatyr-401-advanced-javascript/lab-32)
 * [![Build Status](https://travis-ci.com/charmedsatyr-401-advanced-javascript/lab-32.svg?branch=submission)](https://travis-ci.com/charmedsatyr-401-advanced-javascript/lab-32) 
+* [Netflify](https://competent-payne-0fff15.netlify.com/)
 
 ### Modules
 ```
@@ -20,77 +21,34 @@
 │   └── manifest.json
 ├── README.md
 ├── src
-│   ├── App.js
+│   ├── api-server-url.js
+│   ├── components
+│   │   ├── app.js
+│   │   ├── app.scss
+│   │   ├── new-record.js
+│   │   └── record.js
 │   ├── index.js
-│   ├── Numbers.js
-│   ├── serviceWorker.js
-│   ├── store
-│   │   ├── app-actions.js
-│   │   ├── app-reducers.js
-│   │   ├── index.js
-│   │   ├── middleware
-│   │   │   └── reporter.js
-│   │   ├── numbers-actions.js
-│   │   └── numbers-reducer.js
-│   └── style.scss
+│   ├── players.schema.json
+│   └── store
+│       ├── index.js
+│       ├── middleware
+│       │   └── reporter.js
+│       ├── records-actions.js
+│       ├── records-reducer.js
+│       └── records-reducer.test.js
 └── yarn.lock
 
-4 directories, 18 files
+5 directories, 19 files
 ```
-
----
-
-### `./public/*`
-#### Exported Values and Methods
-Static views provided by `create-react-app`.
-
----
-
-### `./src/index.js`
-#### Exported Values and Methods
-Entry point that renders `<App/>` wrapped in a store `<Provider/>` component.
-
----
-
-### `./src/App.js`
-#### Exported Values and Methods
-Contains application state and methods and renders `<Numbers/>` as a child.
-
----
-
-### `./src/store/app-actions.js`
-#### Exported Values and Methods
-`nameChanger(payload)` -> Action creator, returns `Object` with type `CHANGE`.
-
----
-
-
-### `./src/store/numbers-actions.js`
-#### Exported Values and Methods
-`change()` -> Action creator, returns `Object` with type `CHANGE`.
-`reset()` -> Action creator, returns `Object` with type `RESET`.
-
----
-### `./src/store/app-reducers.js`
-#### Exported Values and Methods
-Reducer to modify `app` state.
-
----
-
-### `./src/store/numbers-reducer.js`
-#### Exported Values and Methods
-Reducer to modify `numbers` state.
-
----
 
 #### Tests
 * What assertions were made?
-  * N/A
+  * Reducer REST methods have basic tests.
 
 * What assertions need to be / should be made?
   * Snapshot and functional tests could be made for each component.
   * Tests could ensure each component properly calls `dispatch` with internal handlers.
-  * Action creators and reducers could be tested to ensure appropriate output.
+  * Action creators and reducers could be further tested to ensure appropriate output.
 
 #### UML
-![uml](assets/uml.jpg)
+N/A
