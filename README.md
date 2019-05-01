@@ -41,8 +41,8 @@
 5 directories, 19 files
 ```
 
-### Summmary
-This application uses `react-jsonschema-form` to create dynamic forms from a Mongoose-style schema. A submitted form adds a record to the display. The records and forms manipulate a Redux store by calling REST-style actions.
+### Summary
+This application uses `react-jsonschema-form` to create dynamic forms from a Mongoose-style schema. A submitted form adds a record to a Redux store. The view is populated from the store. The records and forms manipulate the store by calling REST-style actions.
 
 Users can choose to use the default local `Players` schema or toggle to use a `Teams` schema from a remote API declared in `./src/api-server-url.js`.
 
