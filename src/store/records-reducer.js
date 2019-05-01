@@ -39,7 +39,7 @@ export default (state = initialState, action) => {
         payload._id = dumbId();
       }
       if (!payload.__v) {
-        payload.__v = uuidv1();
+        payload.__v = Math.floor(100 * Math.random());
       }
       return Object.assign({}, state, { list: [...state.list, payload] });
     // Replace a resource
