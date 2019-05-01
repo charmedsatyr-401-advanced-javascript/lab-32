@@ -3,10 +3,10 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import reporter from './middleware/reporter.js';
 
-import playersReducer from './players-reducer.js';
+import recordsReducer from './records-reducer.js';
 
 let reducers = combineReducers({
-  players: playersReducer,
+  records: recordsReducer,
 });
 
 const store = () => createStore(reducers, composeWithDevTools(applyMiddleware(reporter)));

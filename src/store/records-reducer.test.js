@@ -1,4 +1,4 @@
-import players from './players-reducer';
+import players, { example, dumbId } from './records-reducer';
 
 describe('players reducer', () => {
   const mickey = {
@@ -7,26 +7,16 @@ describe('players reducer', () => {
     throws: 'L',
     bats: 'L',
     team: 'Dodgers',
-    _id: 2,
+    _id: dumbId(),
     __v: 4,
   };
-  const example = {
-    name: 'Stu',
-    position: 'C',
-    throws: 'L',
-    bats: 'L',
-    team: 'Dodgers',
-    _id: 1,
-    __v: 3,
-  };
-
   it('should POST', () => {
     const action = { payload: mickey, type: 'POST' };
     const result = players(undefined, action);
     expect(result.list).toEqual(expect.arrayContaining([mickey]));
   });
   it('should GET', () => {
-    const action = { payload: 1, type: 'GET' };
+    const action = { payload: example._id, type: 'GET' };
     const result = players(undefined, action);
     expect(result.active).toMatchObject(example);
   });
