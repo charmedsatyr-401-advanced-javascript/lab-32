@@ -1,5 +1,3 @@
-'use strict';
-
 import players from './players-reducer';
 
 describe('players reducer', () => {
@@ -13,7 +11,7 @@ describe('players reducer', () => {
     __v: 4,
   };
   const example = {
-    name: 'stu',
+    name: 'Stu',
     position: 'C',
     throws: 'L',
     bats: 'L',
